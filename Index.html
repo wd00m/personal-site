@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personalSite</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<h2 class="title1">Welcome to my own mess</h2>
-<p class="mms">[make me sad]<br>[make me mad]<br><strong>[make me feel good?]</strong></p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Site</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .btn1cont {
+      position: absolute;
+      top: 500px;
+      left: 875px;
+    }
 
-<body>
-    
+    .btn1 {
+      font-size: clamp(14px, 2vw, 22px);
+      padding: 0.5em 1.2em;
+      background-color: #d2738b00;
+      color: white;
+      border: 3px solid #a94f6e;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .btn1:hover {
+      background-color: #a94f6e;
+    }
+  </style>
+</head>
+<body style="position: relative;">
+
+  <aside id="sidebar">
+    <!-- Conteúdo do menu lateral -->
+    <nav>
+      <ul>
+        <li><a href="#abtme">About Me</a></li>
+        <!-- Mais itens futuramente -->
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h2 class="title1">Welcome to my own mess</h2>
+      <p class="mms">
+        [make me sad]<br />
+        [make me mad]<br />
+        <strong>[make me feel good?]</strong>
+      </p>
+      <p class="credit">A personal site by WDoom</p>
+    </header>
+
+    <!-- BOTÃO COM POSIÇÃO CONTROLADA -->
+    <section class="btn1cont">
+      <a class="btn1" href="abtme.html">
+        About Me
+      </a>
+    </section>
+  </main>
+
 </body>
-</html>
+</htm
