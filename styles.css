@@ -1,0 +1,26 @@
+body {
+    background-image: url("images/bg.jpg");
+}
+
+.title1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 38px;
+    text-align: center;
+    color: white;
+}
+
+.mms {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    letter-spacing: 4px;
+    line-height: 70px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    color: white; 
+}
