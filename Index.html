@@ -5,33 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Site</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .btn1cont {
-      position: absolute;
-      top: 500px;
-      left: 875px;
-    }
 
-    .btn1 {
-      font-size: clamp(14px, 2vw, 22px);
-      padding: 0.5em 1.2em;
-      background-color: #d2738b00;
-      color: white;
-      border: 3px solid #a94f6e;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-    .btn1:hover {
-      background-color: #a94f6e;
-    }
-  </style>
 </head>
 <body style="position: relative;">
 
-  <aside id="sidebar">
+  <aside id="topbar">
     <!-- Conteúdo do menu lateral -->
     <nav>
       <ul>
@@ -43,7 +21,7 @@
 
   <main class="content">
     <header>
-      <h2 class="title1">Welcome to my own mess</h2>
+      <h2 class="title1" style="margin-top: 60px;">Welcome to my own mess</h2>
       <p class="mms">
         [make me sad]<br />
         [make me mad]<br />
@@ -52,13 +30,19 @@
       <p class="credit">A personal site by WDoom</p>
     </header>
 
-    <!-- BOTÃO COM POSIÇÃO CONTROLADA -->
-    <section class="btn1cont">
+    <div class="btns-container">
       <a class="btn1" href="abtme.html">
         About Me
       </a>
-    </section>
+      <a class="btn1" href="projects.html">
+        My Projects
+      </a>
+       <a class="btn1" href="socials.html">
+        My Socials
+      </a>
+    </div>
+    <img style="position: fixed; top: 360px; left: 1430px;"src="\images\laingif1.gif" alt="Oopsies"/>
   </main>
 
 </body>
-</htm
+</html>
