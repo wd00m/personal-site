@@ -1,185 +1,163 @@
+/* Reset básico */
 * {
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    background-image: url("images/lainbg.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-  }
-  
-  #sidebar {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 320px;
-    background-color: #7a3a5a6b;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: black 10px 5px 10px;
-  }
-  
-  #sidebar nav ul {
-    list-style: none;
-  }
-  
-  #sidebar nav ul li {
-    margin-bottom: 10px;
-  }
-  
-  #sidebar a {
-    text-decoration: none;
-    color: #c1b492;
-    font-size: 18px;
-  }
-  
-  #sidebar a:hover {
-    color: #d2738a;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 40px;
-  }
-  
-  .title1 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  
-  .mms {
-    font-size: 1.75rem;
-    text-align: center;
-    margin-bottom: 80px;
-    letter-spacing: 4px;
-    line-height: 1.8;
-  }
-  
-  .credit {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-  }
-  
-  h4 {
-    font-size: 1.75rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .cnt {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-  }
-  
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body e background */
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza filhos no cross-axis */
+  justify-content: flex-start;
+  font-family: 'Courier New', Courier, monospace;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  background-image: url("images/lainbg.jpg");
+}
+
+/* Tipografia e espaços gerais */
+.titleh2 {
+  font-size: clamp(24px, 4vw, 40px);
+  text-align: center;
+  margin: clamp(40px, 6vw, 60px) 0;
+}
+
+.mms {
+  font-size: clamp(16px, 2.5vw, 28px);
+  text-align: center;
+  margin: -30px 0 clamp(20px, 4vw, 45px);
+  letter-spacing: 4px;
+  line-height: 1.8;
+}
+
+.credit {
+  text-align: center;
+  font-size: clamp(14px, 1.5vw, 19px);
+  margin: 0;
+}
+
+h4 {
+  font-size: clamp(20px, 3vw, 28px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Topbar fixa e alinhada */
+#topbar {
+ /* faz o elemento preencher até max-width */
+  width: 960px;
+  margin: 15px auto 0; /* centralizado horizontalmente */
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 8px;
+  border: 3px solid #a94f6e;
+  padding: clamp(6 px, 1.5vw, 10px);
+  box-sizing: border-box;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+  flex: auto;
+  padding: 5px;
+}
+
+#topbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(5px, 2vw, 10px);
+  padding: 0;
+  margin: 0;
+}
+
+#topbar nav ul li a {
+  font-size: clamp(12px, 1.5vw, 18px);
+  border: 3px solid #a94f6e;
+  background-color: transparent;
+  color: #c1b492;
+  border-radius: 6px;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+#topbar nav ul li a:hover {
+  background-color: #d2738a;
+}
+
+/* Seção Sobre Me alinhada */
+#abtme {
+  width: 960px;
+  margin: clamp(40px, 8vw, 190px) auto 0;
+  background-color: rgba(122, 58, 90, 0.42);
+  padding: clamp(20px, 5vw, 30px);
+  border-radius: 8px;
+  box-shadow: black 10px 5px 10px;
+  text-align: justify;
+  height: auto;
+}
+
+/* Links */
+a:link,
+a:visited,
+a:active {
+  color: #c1b492;
+}
+a:hover {
+  color: #d2738a;
+}
+
+/* Botões */
+.btn1 {
+  font-size: clamp(14px, 2vw, 22px);
+  padding: clamp(6px, 1.5vw, 12px) clamp(16px, 4vw, 32px);
+  border: 3px solid #a94f6e;
+  background-color: transparent;
+  color: white;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  max-width: 290px;
+  min-width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn1:hover {
+  background-color: #a94f6e;
+}
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 3vw, 24px);
+  margin-top: clamp(20px, 4vw, 32px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #topbar,
   #abtme {
-    background-color: #7a3a5a6b;
-    max-width: 1000px;
-    margin: 40px auto 0 auto;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: black 10px 5px 10px;
-    max-height: 400px;
-    align-self: center;
+    max-width: 100%;
   }
-  
-    a:link {
-    color: #c1b492;
-  }
-  
-  a:visited {
-    color: #c1b492;
-  }
-  
-  a:active {
-    color: #c1b492;
-  }
-  
-  a:hover {
-    color: #d2738a;
-  }
-
-  @media (max-width: 1024px) {
-    body {
-      padding-left: 0;
-      flex-direction: column;
-    }
-  
-    .content {
-      padding: 20px;
-    }
-  
-    #abtme {
-      width: 100%;
-      max-height: 600px;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .title1 {
-      font-size: 1.8rem;
-    }
-  
-    .mms {
-      font-size: 1.3rem;
-      line-height: 1.6;
-    }
-  
-    .cnt {
-      font-size: 1rem;
-    }
-  }
-  
-  .btn1 {
-    font-size: clamp(14px, 2vw, 22px);
-    text-align: center;
-    border: 3px solid #a94f6e;
-    background-color: #d2738b00;
-    color: white;
-    border-radius: 6px;
-    display: inline-block;
-    padding: 0.5em 1.2em;
-    cursor: pointer;
-    max-width: 290px;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-
-  .btn1:hover {
-    background-color: #a94f6e;
-  }
-
-  .btns-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
-    margin-top: 2em;
-  }
-
   #topbar {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 100%;
-    height: 60px;
-    background-color: rgba(122, 58, 90, 0.6);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    border-radius: 8px;
+    padding: clamp(10px, 3vw, 16px);
   }
+  #topbar nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
