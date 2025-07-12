@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512" />
-  <meta charset="UTF-8" />
-  <title>WDoom's Cove - Music</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon.png"
+      sizes="512x512"
+    />
+    <meta charset="UTF-8" />
+    <title>WDoom's Cove - Music</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-    <img style="position: fixed; top: 360px; left: 1430px;" src="/images/laingif1.gif" alt="Oopsies" />
+  </head>
+  <body>
+    <img
+      style="position: fixed; top: 360px; left: 1430px"
+      src="/images/laingif1.gif"
+      alt="Oopsies"
+    />
 
-  <header>
-    <aside id="topbar">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home Page</a></li>
-          <li><a href="abtme.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="socials.html">Socials</a></li>
-          <li><a href="fashion.html">Fashion</a></li>
-          <li><a href="writing.html">Writings</a></li>
-          <li><a href="music.html">Music</a></li>
-        </ul>
-      </nav>
-    </aside>
-    <h2 class="titleh2" style="margin-bottom: 0px;">[Music]</h2>
-  </header>
-  <div style="width: 40px; height: 40px; position: fixed; bottom: 0; left: 0;">
-    <div id="winamp-container"></div>
-  </div>
+    <header>
+      <aside id="topbar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="abtme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="socials.html">Socials</a></li>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a href="writing.html">Writings</a></li>
+            <li><a href="music.html">Music</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <h2 class="titleh2" style="margin-bottom: 0px">[Music]</h2>
+    </header>
+    <div style="width: 40px; height: 40px; position: fixed; bottom: 0; left: 0">
+      <div id="winamp-container"></div>
+    </div>
 
-  <script>
-    const Winamp = window.Webamp;
+    <script>
+      const Winamp = window.Webamp;
 
-    const webamp = new Webamp({
-      initialTracks: [
-        {
-          metaData: {
-            artist: "Deftones",
-            title: "Diamond Eyes"
+      const webamp = new Webamp({
+        initialTracks: [
+          {
+            metaData: {
+              artist: "Deftones",
+              title: "Diamond Eyes",
+            },
+            url: "https://dn721805.ca.archive.org/0/items/diamond_eyes_202304/01%20Diamond%20Eyes.mp3",
           },
-          url: "https://dn721805.ca.archive.org/0/items/diamond_eyes_202304/01%20Diamond%20Eyes.mp3"
-        }
-      ]
-    });
+        ],
+      });
 
-    webamp.renderWhenReady(document.getElementById('winamp-container'));
-  </script>
-
-</body>
+      webamp.renderWhenReady(document.getElementById("winamp-container"));
+    </script>
+  </body>
 </html>
